@@ -23,12 +23,14 @@ const theme = extendTheme({
       fontWeight: "normal",
       lineHeight: "150%",
       letterSpacing: "0.15px",
+      textDecoration: "underline"
     },
     remainingDays: {
       fontSize: ["12px", "17px"],
       fontWeight: "normal",
       lineHeight: "150%",
       letterSpacing: "0.04px",
+      textDecoration: "underline"
     },
   },
 });
