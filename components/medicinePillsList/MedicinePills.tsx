@@ -13,14 +13,13 @@ type MedicinePillsProps = {
 const MedicinePills = ({ medicinePills }: MedicinePillsProps) => {
   return (
     <HStack>
-      <Image />
+      <Image
+        boxSize='50px'
+        objectFit='cover'
+        src={medicinePills.image}
+        alt='Dan Abramov'
+      />
       <VStack>
-        <Image
-          boxSize='50px'
-          objectFit='cover'
-          src={medicinePills.image}
-          alt='Dan Abramov'
-        />
         <Text>
           {medicinePills.name}
         </Text>
