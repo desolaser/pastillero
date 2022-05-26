@@ -19,7 +19,7 @@ const MedicinePills = ({ medicinePills }: MedicinePillsProps) => {
         src={medicinePills.image}
         alt='Dan Abramov'
       />
-      <VStack>
+      <VStack align={'left'}>
         <Text>
           {medicinePills.name}
         </Text>
