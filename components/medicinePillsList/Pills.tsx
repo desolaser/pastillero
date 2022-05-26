@@ -5,6 +5,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import MedicinePills from "../../model/MedicinePills";
+import CartButton from "../cartButton";
 
 type PillsProps = {
   medicinePills: MedicinePills
@@ -33,7 +34,7 @@ const Pills = ({ medicinePills }: PillsProps) => {
           {`Para ${medicinePills.remainingDays} días`}
         </Text>
       </VStack>
-      
+      <CartButton />
     </HStack>
   );
 }
