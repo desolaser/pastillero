@@ -17,7 +17,7 @@ const MedicinePills = ({ medicinePills }: MedicinePillsProps) => {
         boxSize='50px'
         objectFit='cover'
         src={medicinePills.image}
-        alt='Dan Abramov'
+        alt={medicinePills.name}
       />
       <VStack align={'left'}>
         <Text>
