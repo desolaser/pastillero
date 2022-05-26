@@ -5,14 +5,14 @@ import CartIcon from "./CartIcon";
 const CartButton = () => {
   return (
     <Box style={{ position: "relative" }}>
-      <CartIcon w={16} h={16} p={0} m={0} />
+      <CartIcon w={12} h={12} p={0} m={0} />
       <PlusIcon 
         style={{
           position: "absolute",
-          right: "-15px",
-          bottom: "20px"
+          right: "-11px",
+          bottom: "12px"
         }}
-        w={16} h={16} p={0} m={0} />
+        w={12} h={12} p={0} m={0} />
     </Box>
   )
 };
