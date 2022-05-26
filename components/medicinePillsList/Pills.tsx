@@ -14,7 +14,7 @@ const MedicinePills = ({ medicinePills }: MedicinePillsProps) => {
   return (
     <HStack spacing={16}>
       <Image
-        boxSize='50px'
+        boxSize='62px'
         objectFit='cover'
         src={medicinePills.image}
         alt={medicinePills.name}
