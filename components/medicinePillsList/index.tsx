@@ -1,4 +1,5 @@
 import {
+  Box,
   VStack,
   Text,
 } from "@chakra-ui/react";
@@ -7,7 +8,15 @@ import Pills from "./Pills";
 
 const MedicinesList = () => (
   <VStack align={'left'}>
-    <Text mx={'2rem'}>Qué Queda?</Text>
+    <Box bgColor="#F5F5F5" py={2}>
+      <Text 
+        mx={'1rem'} 
+        fontSize={"19px"} 
+        lineHeight={"28px"} 
+        letterSpacing={"0.15px"}>
+        Te queda
+      </Text>
+    </Box>
     <VStack w={'full'}>
       {dummyData.map(item => <Pills key={item.name} medicinePills={item} />)}
     </VStack>
