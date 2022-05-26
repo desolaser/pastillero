@@ -27,10 +27,10 @@ const Pills = ({ medicinePills }: PillsProps) => {
         <Text textStyle="pillMg" color="rgba(0, 0, 0, 0.54)">
           {medicinePills.mg}          
         </Text>
-        <Text textStyle="remainingPills">
+        <Text textStyle="remainingPills" color="#0277BD">
           {`Quedan ${medicinePills.remainingPills} comprimidos`}
         </Text>
-        <Text textStyle="remainingDays">
+        <Text textStyle="remainingDays" color="#0277BD">
           {`Para ${medicinePills.remainingDays} días`}
         </Text>
       </VStack>
