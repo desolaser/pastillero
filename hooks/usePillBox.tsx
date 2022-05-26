@@ -8,9 +8,8 @@ type PillBoxValues = {
   isError: boolean
 }
 
-const fetcher = async (endpoint: string) => {
+const fetcher = async (endpoint: string) => 
   axios.get(endpoint).then(data => data);
-}
 
 const usePillBox = () => {
   const { data, error } = useSWR(`${process.env.API_URL}/get`, fetcher);
