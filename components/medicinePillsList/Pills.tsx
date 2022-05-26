@@ -12,24 +12,28 @@ type MedicinePillsProps = {
 
 const MedicinePills = ({ medicinePills }: MedicinePillsProps) => {
   return (
-    <HStack spacing={16}>
+    <HStack spacing={8}>
       <Image
         boxSize='62px'
         objectFit='cover'
         src={medicinePills.image}
         alt={medicinePills.name}
       />
-      <VStack align={'left'}>
-        <Text>
+      <VStack align={'left'} spacing={0}>
+        <Text textStyle="pillName">
           {medicinePills.name}
         </Text>
-        <Text>
+        <Text textStyle="pillMg" color="rgba(0, 0, 0, 0.54)">
           {medicinePills.mg}          
         </Text>
-        <Text>
-          {`Quedan ${medicinePills.remainingPills} píldoras para ${medicinePills.remainingDays} días.`}
+        <Text textStyle="remainingPills">
+          {`Quedan ${medicinePills.remainingPills} comprimidos`}
+        </Text>
+        <Text textStyle="remainingDays">
+          {`Para ${medicinePills.remainingDays} días`}
         </Text>
       </VStack>
+      
     </HStack>
   );
 }
