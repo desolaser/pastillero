@@ -13,7 +13,7 @@ type PillsProps = {
 
 const Pills = ({ medicinePills }: PillsProps) => {
   return (
-    <HStack spacing={8}>
+    <HStack spacing={4}>
       <Image
         boxSize='62px'
         objectFit='cover'
