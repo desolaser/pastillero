@@ -6,11 +6,11 @@ import {
 } from "@chakra-ui/react";
 import MedicinePills from "../../model/MedicinePills";
 
-type MedicinePillsProps = {
+type PillsProps = {
   medicinePills: MedicinePills
 };
 
-const MedicinePills = ({ medicinePills }: MedicinePillsProps) => {
+const Pills = ({ medicinePills }: PillsProps) => {
   return (
     <HStack spacing={8}>
       <Image
@@ -38,4 +38,4 @@ const MedicinePills = ({ medicinePills }: MedicinePillsProps) => {
   );
 }
 
-export default MedicinePills;
+export default Pills;
