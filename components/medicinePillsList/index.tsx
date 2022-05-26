@@ -6,9 +6,9 @@ import MedicinePills from "../../model/MedicinePills";
 import Medicine from "./MedicinePills";
 
 const MedicinesList = () => (
-  <VStack>
-    <Text>Qué Queda?</Text>
-    <VStack>
+  <VStack align={'left'}>
+    <Text mx={'2rem'}>Qué Queda?</Text>
+    <VStack w={'full'}>
       {dummyData.map(item => <Medicine key={item.name} medicinePills={item} />)}
     </VStack>
   </VStack>
