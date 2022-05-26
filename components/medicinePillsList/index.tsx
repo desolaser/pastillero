@@ -3,13 +3,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import MedicinePills from "../../model/MedicinePills";
-import Medicine from "./MedicinePills";
+import Pills from "./Pills";
 
 const MedicinesList = () => (
   <VStack align={'left'}>
     <Text mx={'2rem'}>Qué Queda?</Text>
     <VStack w={'full'}>
-      {dummyData.map(item => <Medicine key={item.name} medicinePills={item} />)}
+      {dummyData.map(item => <Pills key={item.name} medicinePills={item} />)}
     </VStack>
   </VStack>
 );
