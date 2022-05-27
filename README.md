@@ -46,5 +46,4 @@ yarn dev
 
 ## Optional
 
-Alternatively, if you like, there is a page in vercel to see it online.
-<TODO: INSERT LINK>
+Alternatively, if you like, there is a page in [Vercel](https://pastillero.vercel.app) to see it online.
