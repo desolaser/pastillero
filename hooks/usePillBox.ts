@@ -19,28 +19,26 @@ const usePillBox = () => {
 
   useEffect(() => {
     if (products && purchases) {
-      const pillsData = getPills();
+      const pillsData: MedicinePills[] = getPills();
       setPills(pillsData);
     }
   }, [products, purchases]);
 
-
-  const getPills = () => {
+  const getPills = (): MedicinePills[] => {
     const discountedPurchases = purchases?.map((purchase: Purchase) => {
       const discountedPills = getDateDifference(purchase.received_date);
       const newPurchaseDetails = purchase.details.map(detail => {
-        const newQuantity = detail.quantity - discountedPills
-        purchase.purchase_id
-        return ({      
+        const newQuantity: number = detail.quantity - discountedPills;
+        return ({
           ...detail, 
           quantity: newQuantity > 0 ? newQuantity : 0
-        })
-      })
+        });
+      });
   
       return {
         ...purchase,
         details: newPurchaseDetails
-      }
+      };
     });
   
     const purchasesDetails = discountedPurchases?.reduce((arr: PurchaseDetail[], purchase: Purchase) => {
@@ -67,7 +65,7 @@ const usePillBox = () => {
           mg: product.concentration,
           remainingPills: inventory[itemKey],
           remainingDays: inventory[itemKey],
-        }
+        };
       }
       return {
         image: "",
