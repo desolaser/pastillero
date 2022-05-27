@@ -7,26 +7,26 @@ const theme = extendTheme({
   },
   textStyles: {
     pillName: {
-      fontSize: ["15px", "20px"],
+      fontSize: ["15px"],
       fontWeight: "semibold",
       lineHeight: "150%",
       letterSpacing: "0.15px",
     },
     pillMg: {
-      fontSize: ["13px", "18px"],
+      fontSize: ["13px"],
       fontWeight: "normal",
       lineHeight: "150%",
       letterSpacing: "0.15px",
     },
     remainingPills: {
-      fontSize: ["13px", "18px"],
+      fontSize: ["13px"],
       fontWeight: "normal",
       lineHeight: "150%",
       letterSpacing: "0.15px",
       textDecoration: "underline"
     },
     remainingDays: {
-      fontSize: ["12px", "17px"],
+      fontSize: ["12px"],
       fontWeight: "normal",
       lineHeight: "150%",
       letterSpacing: "0.04px",
