@@ -23,7 +23,7 @@ const MedicinesList = () => {
       {isError ? (
         <Error title="Hubo un error" text="Intente de nuevo más tarde" />  
       ) : (
-        <VStack w={["sm", "md", "xl", "full"]} align={'left'}>
+        <VStack w={["sm"]} align={'left'}>
           <Box bgColor="#F5F5F5" py={2}>
             <Text 
               mx={'1rem'} 
@@ -33,7 +33,7 @@ const MedicinesList = () => {
               Te queda
             </Text>
           </Box>
-          {pills?.length == 0 ? (   
+          {pills.length == 0 ? (
             <VStack>
               <Text>
                 No ha comprado ningún medicamento.
@@ -41,10 +41,10 @@ const MedicinesList = () => {
               <Button colorScheme={"blue"}>
                 Presione aquí para comprar
               </Button>
-            </VStack>         
-          ) : (        
-            <VStack w={["sm", "md", "xl", "full"]}>    
-              {pills?.map((item: MedicinePills) => 
+            </VStack>
+          ) : (
+            <VStack w={["sm"]}>
+              {pills.map((item: MedicinePills) => 
                 <Pills key={item.name} medicinePills={item} />)}
             </VStack>
           )}
