@@ -28,7 +28,7 @@ const MedicinesList = () => {
         </Text>
       </Box>
       <VStack w={'full'}>
-        {pills.map(item => <Pills key={item.name} medicinePills={item} />)}
+        {pills?.map(item => <Pills key={item.name} medicinePills={item} />)}
       </VStack>
     </VStack>
   )
