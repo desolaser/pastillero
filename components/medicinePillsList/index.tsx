@@ -11,7 +11,7 @@ import Error from "../Error";
 import Loading from "../Loading";
 import Pills from "./Pills";
 
-const MedicinesList = () => {
+const MedicinesPillsList = () => {
   const { pills, isLoading, isError } = usePillBox();
 
   if (isLoading) return <Loading />
@@ -52,4 +52,4 @@ const MedicinesList = () => {
   )
 }
 
-export default MedicinesList;
+export default MedicinesPillsList;
