@@ -4,19 +4,17 @@ import {
   VStack,
   Text,
   Button,
-  Spinner
 } from "@chakra-ui/react";
 import usePillBox from "../../hooks/usePillBox";
 import MedicinePills from "../../model/MedicinePills";
 import Error from "../Error";
+import Loading from "../Loading";
 import Pills from "./Pills";
 
 const MedicinesList = () => {
   const { pills, isLoading, isError } = usePillBox();
 
-  if (isLoading) return (
-    <Spinner />
-  )
+  if (isLoading) return <Loading />
   
   return (
     <Center>
