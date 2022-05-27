@@ -12,7 +12,7 @@ import Error from "../Error";
 import Pills from "./Pills";
 
 const MedicinesList = () => {
-  const { pills, isLoading, isError } = usePillBox(0);
+  const { pills, isLoading, isError } = usePillBox();
 
   if (isLoading) return (
     <Spinner />
