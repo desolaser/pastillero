@@ -81,7 +81,7 @@ const usePillBox = () => {
 
   return {
     pills,
-    isLoading: (isLoadingPurchases || isLoadingProd) && !pills,
+    isLoading: (isLoadingPurchases || isLoadingProd),
     isError: isErrorProd || isErrorPurchases
   } as PillBoxValues;
 }
