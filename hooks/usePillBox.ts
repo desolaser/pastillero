@@ -26,14 +26,10 @@ const usePillBox = () => {
 
   const getPills = (): MedicinePills[] => {
     const discountedPurchases = purchases?.map((purchase: Purchase) => {
-      const discountedPills = getDateDifference(purchase.received_date);
-      const newPurchaseDetails = purchase.details.map(detail => {
-        const newQuantity: number = detail.quantity - discountedPills;
-        return ({
+      const newPurchaseDetails = purchase.details.map(detail => ({
           ...detail, 
-          quantity: newQuantity > 0 ? newQuantity : 0
-        });
-      });
+          received_date: purchase.received_date
+      }));
   
       return {
         ...purchase,
@@ -44,13 +40,22 @@ const usePillBox = () => {
     const purchasesDetails = discountedPurchases?.reduce((arr: PurchaseDetail[], purchase: Purchase) => {
       return [...arr, ...purchase.details]
     }, []);
+
+
   
     const inventory = purchasesDetails?.reduce((obj: any, value) => {
       const key: string = value.product_id.toString();
+      
+      let discountedPills: number = 0
+      if (value.received_date) {
+        discountedPills = getDateDifference(value.received_date);
+      }
+      const newQuantity: number = value.quantity - discountedPills;
+
       if (key in obj) {
-        obj[key] += value.quantity;
+        obj[key] += newQuantity > 0 ? newQuantity : 0;
       } else {
-        obj[key] = value.quantity;
+        obj[key] = newQuantity > 0 ? newQuantity : 0;
       }
   
       return obj;
