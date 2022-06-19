@@ -1,9 +1,6 @@
-# Pillbox InVentures technical test
+# Pillbox typescript project
 
 ## Description
-
-This is a repository with an answer to InVentures first technical test made in
-next.js.
 
 It simulates a Pillbox view for a farmaceutic e-commerce. The Pillbox shows the
 remaining medicines in client's inventory and how much time the pills will last,
